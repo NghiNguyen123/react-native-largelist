@@ -1010,6 +1010,8 @@ class LargeList extends React.Component {
     this.workRefs.forEach(cell => {
       if (this._compareIndexPath(indexPath, cell.indexPath) === 0) {
         cell.contentUpdate();
+        //close row indexPath
+        cell._scrollToOrigin()
       }
     });
   }
