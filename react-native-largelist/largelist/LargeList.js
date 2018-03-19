@@ -1034,15 +1034,15 @@ class LargeList extends React.Component {
     let timer = setTimeout(() => {
       this.initVar();
       this.safeArea = { top: 0, bottom: 0 };
-      this.workRefs.forEach(cell => {
-        this.freeRefs.push(cell);
-      });
-      this.freeRefs.forEach(cell => {
-        cell.waitForRender = true;
-        let index = this.workRefs.indexOf(cell);
-        this.workRefs.splice(index, index > -1 ? 1 : 0);
-        cell.updateToIndexPath(cell.indexPath, -10000, cell.height);
-      });
+//       this.workRefs.forEach(cell => {
+//         this.freeRefs.push(cell);
+//       });
+//       this.freeRefs.forEach(cell => {
+//         cell.waitForRender = true;
+//         let index = this.workRefs.indexOf(cell);
+//         this.workRefs.splice(index, index > -1 ? 1 : 0);
+//         cell.updateToIndexPath(cell.indexPath, -10000, cell.height);
+//       });
       this.workSectionRefs.forEach(section => {
         this.freeSectionRefs.splice(0, 0, section);
       });
